@@ -12,6 +12,11 @@
     --white: white;
 }
 
+html {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     font-family: "DM Sans", sans-serif;
     color: var(--primary);
@@ -258,12 +263,13 @@ footer .container {
 }
 
 @media screen and (max-width: 520px) {
+
     .menu-btn {
         display: block;
-
     }
 
     .nav-list {
+        display: none;
         flex-direction: column;
         background: gray;
         position: absolute;
@@ -277,6 +283,7 @@ footer .container {
     }
 
     .nav-list.active {
+        display: flex;
         right: 0;
     }
 
@@ -292,12 +299,18 @@ footer .container {
     }
 
     .container {
+        max-width: 100%;
+        overflow-x: hidden;
         text-align: center;
     }
 
     #about .container {
         flex-direction: column;
         gap: 2rem;
+    }
+
+    #about img {
+        width: 400px
     }
 
     footer .container {
